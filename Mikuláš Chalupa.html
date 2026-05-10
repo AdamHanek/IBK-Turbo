@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikuláš Chalupa | IBK TURBO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --turbo-yellow: #ffc300; 
+            --turbo-orange: #ff9100;
+            --black: #111111;
+            --white: #ffffff;
+            --light-gray: #f2f2f2;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--white);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .logo { font-weight: 800; font-size: 1.4rem; text-transform: uppercase; text-decoration: none; color: var(--black); }
+        .nav-links a { text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.85rem; margin-left: 20px; text-transform: uppercase; }
+
+        .container {
+            max-width: 750px;
+            margin: auto; 
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .profile-header {
+            margin-bottom: 40px;
+        }
+
+        .player-number {
+            display: block;
+            color: var(--turbo-yellow);
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            margin: 0;
+            line-height: 0.9;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+        }
+
+        .surname { color: var(--turbo-orange); }
+
+        .role-badge {
+            display: inline-block;
+            background: var(--black);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 15px;
+        }
+
+        .quote {
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-style: italic;
+            margin: 40px auto;
+            max-width: 550px;
+            position: relative;
+            padding: 20px;
+        }
+
+        .quote::before {
+            content: "„";
+            color: var(--turbo-yellow);
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: 0;
+        }
+
+        .bio p {
+            color: #444;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: var(--light-gray);
+            padding: 25px 15px;
+            border-radius: 24px;
+            transition: 0.3s ease;
+        }
+
+        .stat-box:hover { 
+            background: var(--turbo-yellow); 
+            transform: translateY(-5px);
+        }
+
+        .stat-val { display: block; font-size: 1.8rem; font-weight: 800; }
+        .stat-label { font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: #777; }
+
+        .actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .btn-ig {
+            background: var(--black);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-ig:hover { background: var(--turbo-orange); }
+
+        .btn-back {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--turbo-yellow);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #ccc;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 600px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .actions { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="IBK Turbo.html" class="logo">IBK / TURBO</a>
+        <div class="nav-links">
+            <a href="IBK Turbo.html">Home</a>
+            <a href="Soupiska.html">Soupiska</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-header">
+            <span class="player-number">#4</span>
+            <h1>Mikuláš <span class="surname">Chalupa</span></h1>
+            <div class="role-badge">Hrající kouč & Stratég</div>
+        </div>
+        
+        <div class="quote">
+            Někdo kreslí schémata, Mikuláš kreslí osudy zápasů.
+        </div>
+
+        <div class="bio">
+            <p>Mikuláš není jen stratég, je to vizionář. Jeho přístup k taktice připomíná preciznost špičkových koučů – každý pohyb má svůj smysl, každé střídání je součástí většího plánu na ovládnutí hřiště.</p>
+            <p>Pokud situace vyžaduje hrubou sílu, náš kouč odloží tabuli, popadne hůl a ukazuje v praxi to, co vyžaduje: absolutní dominanci a nezdolné srdce.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-val">A+</span>
+                <span class="stat-label">Taktika</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-val">100%</span>
+                <span class="stat-label">Autorita</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-val">PLAY</span>
+                <span class="stat-label">Režim kouče</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="https://www.instagram.com/miky.chalupa/" class="btn-ig" target="_blank">Instagram</a>
+            <a href="Soupiska.html" class="btn-back">Zpět na soupisku</a>
+        </div>
+    </div>
+
+    <footer>
+        Jsme jeden tým IBK TURBO!
+    </footer>
+
+</body>
+</html>

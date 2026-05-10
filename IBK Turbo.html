@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBK TURBO | Official</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* BARVY TURBO PIZZA */
+            --turbo-yellow: #ffc300; 
+            --turbo-orange: #ff9100;
+            --black: #111111;
+            --white: #ffffff;
+            --light-gray: #f2f2f2;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        /* ČISTÁ NAVIGACE STYL FOTBALOVEY */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--white);
+            border-bottom: 1px solid var(--light-gray);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { 
+            font-weight: 800; 
+            font-size: 1.4rem; 
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-left: 20px;
+            text-transform: uppercase;
+        }
+
+        /* HERO SEKCE */
+        .hero {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .badge {
+            background: var(--turbo-yellow);
+            color: var(--black);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        /* HLAVNÍ KONTEJNER */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        /* KARTY STYL FOTBALOVEY */
+        .card {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 30px; /* Hodně zaoblené jako Fotbalovey */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        /* OBRÁZEK */
+        .img-card {
+            border-radius: 30px;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .img-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* TLAČÍTKO STYL TURBO PIZZA */
+        .btn {
+            display: inline-block;
+            background: var(--turbo-orange);
+            color: var(--black);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-top: 20px;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: scale(1.03);
+            background: var(--turbo-yellow);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 60px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: #bbb;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 850px) {
+            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">IBK / TURBO</div>
+        <div class="nav-links">
+            <a href="IBK Turbo.html">Home</a>
+            <a href="Soupiska.html">Soupiska</a>
+            <a href="https://www.instagram.com/p/DIawkGqo4IG/">Instagram</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="badge">Official Team</div>
+        <h1>Maximální chuť<br>z vítězství.</h1>
+    </div>
+
+    <div class="container">
+        
+        <div class="grid">
+            <div class="card" style="background: var(--turbo-yellow);">
+                <h2>O Nás</h2>
+                <p>Někdo hru čte, my ji přepisujeme. IBK Turbo spojuje dravost na hřišti s energií, kterou znáte z Turbo Pizzy.</p>
+            </div>
+            <div class="img-card">
+                <img src="https://mddmostrov.iddm.cz/admin/pictures/galleries/693.JPG" alt="Hřiště">
+            </div>
+        </div>
+
+        <div class="grid" style="grid-template-columns: 1.5fr 1fr;">
+            <div class="card">
+                <h2>Aréna Ostrov</h2>
+                <p>Naše domácí hřiště, kde pálíme jednu šanci za druhou. Přijď nás podpořit na další zápas!</p>
+            </div>
+            <div class="card" style="background: var(--black); color: var(--white);">
+                <h2>Sleduj nás</h2>
+                <p>Nenech si ujít žádný gól ani novinku ze zákulisí na našem IG.</p>
+                <a href="https://www.instagram.com/p/DIawkGqo4IG/" class="btn">Přejít na Profil</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        Jsme jeden tým IBK TURBO!
+    </footer>
+
+</body>
+</html>

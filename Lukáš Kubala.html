@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukáš Kubala | IBK TURBO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --turbo-yellow: #ffc300; 
+            --turbo-orange: #ff9100;
+            --black: #111111;
+            --white: #ffffff;
+            --light-gray: #f2f2f2;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--white);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .logo { font-weight: 800; font-size: 1.4rem; text-transform: uppercase; text-decoration: none; color: var(--black); }
+        .nav-links a { text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.85rem; margin-left: 20px; text-transform: uppercase; }
+
+        .container {
+            max-width: 700px;
+            margin: auto; 
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .profile-header {
+            margin-bottom: 40px;
+        }
+
+        .player-number {
+            display: block;
+            color: var(--turbo-yellow);
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 800;
+            margin: 0;
+            line-height: 0.9;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+        }
+
+        .surname { color: var(--turbo-orange); }
+
+        .quote {
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-style: italic;
+            margin: 40px auto;
+            max-width: 500px;
+            position: relative;
+            padding: 20px;
+        }
+
+        .quote::before {
+            content: "„";
+            color: var(--turbo-yellow);
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: 0;
+        }
+
+        .bio p {
+            color: #444;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: var(--light-gray);
+            padding: 25px 15px;
+            border-radius: 24px;
+            transition: 0.3s ease;
+        }
+
+        .stat-box:hover { 
+            background: var(--turbo-yellow); 
+            transform: translateY(-5px);
+        }
+
+        .stat-val { display: block; font-size: 1.8rem; font-weight: 800; }
+        .stat-label { font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: #777; }
+
+        .actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .btn-ig {
+            background: var(--black);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-ig:hover { background: var(--turbo-orange); }
+
+        .btn-back {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--turbo-yellow);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #ccc;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 600px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .actions { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="IBK Turbo.html" class="logo">IBK / TURBO</a>
+        <div class="nav-links">
+            <a href="IBK Turbo.html">Home</a>
+            <a href="Soupiska.html">Soupiska</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-header">
+            <span class="player-number">#97</span>
+            <h1>Lukáš <span class="surname">Kubala</span></h1>
+        </div>
+        
+        <div class="quote">
+            Chirurg s čepelí místo skalpelu a mozek operace IBK Turbo.
+        </div>
+
+        <div class="bio">
+            <p>Lukáš není jen hráč, je to stratég. Jakmile vstoupí do mantinelů, jeho přihrávky začnou mít oči a střely nacházejí vymetné rohy branek s matematickou přesností.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-val">100%</span>
+                <span class="stat-label">Přesnost</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-val">IQ ∞</span>
+                <span class="stat-label">Přehled</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-val">KLID</span>
+                <span class="stat-label">V zakončení</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="https://www.instagram.com/kubala7_/" class="btn-ig" target="_blank">Instagram</a>
+            <a href="Soupiska.html" class="btn-back">Zpět na soupisku</a>
+        </div>
+    </div>
+
+    <footer>
+        Jsme jeden tým IBK TURBO!
+    </footer>
+
+</body>
+</html>

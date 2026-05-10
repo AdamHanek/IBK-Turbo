@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soupiska | IBK TURBO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --turbo-yellow: #ffc300; 
+            --turbo-orange: #ff9100;
+            --black: #111111;
+            --white: #ffffff;
+            --light-gray: #f2f2f2;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NAVIGACE */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--white);
+            border-bottom: 1px solid var(--light-gray);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 800; font-size: 1.4rem; text-transform: uppercase; letter-spacing: -1px; }
+        .nav-links a { text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.85rem; margin-left: 20px; text-transform: uppercase; }
+
+        .header {
+            padding: 60px 5% 20px 5%;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: -2px;
+        }
+
+        /* ROSTER GRID */
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .player-card {
+            background: var(--light-gray);
+            border-radius: 35px;
+            padding: 30px;
+            text-decoration: none;
+            color: var(--black);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            border: 1px solid transparent;
+        }
+
+        .player-card:hover {
+            transform: translateY(-15px);
+            background: var(--turbo-yellow);
+            box-shadow: 0 20px 40px rgba(255, 195, 0, 0.3);
+        }
+
+        .player-photo-container {
+            width: 180px;
+            height: 180px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border: 5px solid var(--white);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .player-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .player-number {
+            background: var(--black);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+        }
+
+        .player-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .player-position {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--turbo-orange);
+            text-transform: uppercase;
+            margin-top: 8px;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 80px 20px;
+            color: #ccc;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">IBK / TURBO</div>
+        <div class="nav-links">
+            <a href="IBK Turbo.html">Home</a>
+            <a href="Soupiska.html" style="color: var(--turbo-orange);">Soupiska</a>
+            <a href="https://www.instagram.com/p/DIawkGqo4IG/">IG</a>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>NAŠE SOUPISKA</h1>
+        <p style="font-weight: 700; color: var(--black); text-transform: uppercase; letter-spacing: 2px;">Elite Floorball Crew</p>
+    </div>
+
+    <div class="roster-grid">
+        
+        <a href="Adam Hanek.html" class="player-card">
+            <div class="player-number">#17</div>
+            <div class="player-photo-container">
+                <img src="adam.jpg" alt="Adam Hanek">
+            </div>
+            <h2 class="player-name">Adam Hanek</h2>
+            <span class="player-position">Útočník</span>
+        </a>
+
+        <a href="Matěj Plemeník.html" class="player-card">
+            <div class="player-number">#91</div>
+            <div class="player-photo-container">
+                <img src="matej.jpg" alt="Matěj Plemeník">
+            </div>
+            <h2 class="player-name">Matěj Plemeník</h2>
+            <span class="player-position">Útočník</span>
+        </a>
+
+        <a href="Tomáš Vítek.html" class="player-card">
+            <div class="player-number">#29</div>
+            <div class="player-photo-container">
+                <img src="tomas.jpg" alt="Tomáš Vítek">
+            </div>
+            <h2 class="player-name">Tomáš Vítek</h2>
+            <span class="player-position">Obránce</span>
+        </a>
+
+        <a href="Lukáš Kubala.html" class="player-card">
+            <div class="player-number">#97</div>
+            <div class="player-photo-container">
+                <img src="lukas.jpg" alt="Lukáš Kubala">
+            </div>
+            <h2 class="player-name">Lukáš Kubala</h2>
+            <span class="player-position">Útočník</span>
+        </a>
+
+        <a href="Mikuláš Chalupa.html" class="player-card">
+            <div class="player-number">#4</div>
+            <div class="player-photo-container">
+                <img src="mikulas.jpg" alt="Mikuláš Chalupa">
+            </div>
+            <h2 class="player-name">Mikuláš Chalupa</h2>
+            <span class="player-position">Trenér/Obránce</span>
+        </a>
+
+        <a href="Šimon Laža.html" class="player-card">
+            <div class="player-number">#94</div>
+            <div class="player-photo-container">
+                <img src="simon.jpg" alt="Šimon Laža">
+            </div>
+            <h2 class="player-name">Šimon Laža</h2>
+            <span class="player-position">Útočník</span>
+        </a>
+
+        <a href="Denny Šimon.html" class="player-card">
+            <div class="player-number">#6</div>
+            <div class="player-photo-container">
+                <img src="denny.jpg" alt="Denny Šimon">
+            </div>
+            <h2 class="player-name">Denny Šimon</h2>
+            <span class="player-position">Brankář/Obránce</span>
+        </a>
+
+    </div>
+
+    <footer>
+        Jsme jeden tým IBK TURBO!
+    </footer>
+
+</body>
+</html>
